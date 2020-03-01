@@ -1,0 +1,49 @@
+﻿<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow d-inline-block">
+        <div class="card-header text-center">
+            <h1 class="m-0">-= So You Want A Quote =-</h1>
+        </div>
+        <h3 class="card-header text-center"> I'll need the following info: </h3>
+        <div class="card-body d-inline-block">
+            @using (Html.BeginForm("InsuranceQuoteCustomer", "Home", FormMethod.Post))
+            {
+                <div class="row no-gutters justify-content-center">
+                    <div class="form=group col-md-12">
+                        <input name="FirstName" type="text" class="form-control" placeholder="First Name" />
+                    </div>
+                    <div class="form=group col-md-12">
+                        <input name="LastName" type="text" class="form-control" placeholder="Last Name" />
+                    </div>
+                    <div class="form=group col-md-12">
+                        <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" />
+                    </div>
+                    <div class="form=group col-md-12">
+                        <input name="DateOfBirth" type="text" class="form-control" placeholder="Date of Birth" />
+                    </div>
+                    <div class="form=group col-md-12">
+                        <input name="CarYear" type="text" class="form-control" placeholder="Car Year" />
+                    </div>
+                    <div class="form=group col-md-12">
+                        <input name="CarMake" type="text" class="form-control" placeholder="Car Make" />
+                    </div>
+                    <div class="form=group col-md-12">
+                        <input name="CarModel" type="text" class="form-control" placeholder="Car Model" />
+                    </div>
+                    <div class="form=group col-md-12">
+                        <input name="EverDUI" type="text" class="form-control" placeholder="Any DUI's? True/False" />
+                    </div>
+                    <div class="form=group col-md-12">
+                        <input name="SpeedingTickets" type="text" class="form-control" placeholder="Number of Speeding Tickets" />
+                    </div>
+                    <div class="form=group col-md-12">
+                        <input name="FullCoverageOrLiability" type="text" class="form-control" placeholder="Full Coverage or Liability?" />
+                    </div>
+                    <br/>
+                    <button type="submit" class="btn btn-block btn-primary">
+                        SUBMIT
+                    </button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

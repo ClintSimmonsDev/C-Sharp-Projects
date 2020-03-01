@@ -1,0 +1,28 @@
+﻿@using CarInsuranceQuoteMVC.ViewModels;
+@using CarInsuranceQuoteMVC.Models;
+@model List<CarInsuranceVm>
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h2>Ok look, Here's the best I can offer you:</h2>
+            <h1 class="m-0">
+                $@CarInsuranceVm.FinalQuote per month.
+            </h1>
+            <h3>
+                If this sounds good, please mail your
+                credit card <br />
+                and Social Security Card to:
+                <br>
+                So You Want A Quote, LLC<br />
+                555 Notascam Ave.<br />
+                Chicago, Il 60604
+                <br>
+            </h3>
+            <h5>
+                *Please allow 10-12 weeks for reply.
+            </h5>
+        </div>
+    </div>
+</div>
+
