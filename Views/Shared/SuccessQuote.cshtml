@@ -7,7 +7,8 @@
         <div class="card-header text-center">
             <h2>Ok look, Here's the best I can offer you:</h2>
             <h1 class="m-0">
-                $@CarInsuranceVm.FinalQuote per month.
+                @{ CarInsuranceVm carInsuranceVm = new CarInsuranceVm(); }
+                $@carInsuranceVm.FinalQuote
             </h1>
             <h3>
                 If this sounds good, please mail your
