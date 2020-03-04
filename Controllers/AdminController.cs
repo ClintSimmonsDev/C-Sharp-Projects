@@ -20,7 +20,7 @@ namespace CarInsuranceQuoteMVC.Controllers
                 foreach (var quote in quotes)
                 {
                     var CarInsuranceVm = new CarInsuranceVm();
-                    //CarInsuranceVm.Id = quote.Id;
+                    CarInsuranceVm.Id = quote.Id;
                     CarInsuranceVm.FirstName = quote.FirstName;
                     CarInsuranceVm.LastName = quote.LastName;
                     CarInsuranceVm.EmailAddress = quote.EmailAddress;

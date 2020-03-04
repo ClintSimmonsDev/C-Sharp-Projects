@@ -21,7 +21,7 @@ namespace CarInsuranceQuoteMVC.Controllers
         {
             if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(emailAddress)
                 || dateOfBirth == null || (carYear ?? 0) == 0 || string.IsNullOrEmpty(carMake) || string.IsNullOrEmpty(carModel)
-                || everDUI.ToString() == null || string.IsNullOrEmpty(fullCoverageOrLiability))
+                || everDUI.ToString() == null || string.IsNullOrEmpty(fullCoverageOrLiability) || speedingTickets == null)
             {
                 return View("~/Views/Shared/Error.cshtml");
 
@@ -80,7 +80,8 @@ namespace CarInsuranceQuoteMVC.Controllers
                     }
                     carQuote.FinalQuote = (int)baseQuote;
                     carQuoteDb.InsuranceQuoteCustomers.Add(carQuote);
-                    CarInsuranceVm.FinalQuote = (int)baseQuote;
+                    CarInsuranceVm CarVm = new CarInsuranceVm();
+                    CarVm.FinalQuote = (int)baseQuote;
                     carQuoteDb.SaveChanges();
                     return View("SuccessQuote");
                 }
