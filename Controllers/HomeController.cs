@@ -17,7 +17,7 @@ namespace CarInsuranceQuoteMVC.Controllers
 
         [HttpPost]
         public ActionResult InsuranceQuoteCustomer(string firstName, string lastName, string emailAddress, DateTime dateOfBirth, int? carYear, string carMake,
-                                        string carModel, bool everDUI, int? speedingTickets, string fullCoverageOrLiability)
+                                        string carModel, bool everDUI, int? speedingTickets, string fullCoverageOrLiability, int finalQuote=0)
         {
             if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(emailAddress)
                 || dateOfBirth == null || (carYear ?? 0) == 0 || string.IsNullOrEmpty(carMake) || string.IsNullOrEmpty(carModel)
@@ -41,6 +41,7 @@ namespace CarInsuranceQuoteMVC.Controllers
                     carQuote.EverDUI = everDUI;
                     carQuote.SpeedingTickets = speedingTickets;
                     carQuote.FullCoverageOrLiability = fullCoverageOrLiability;
+                    carQuote.FinalQuote = finalQuote;
 
                     decimal baseQuote = 50m;
 

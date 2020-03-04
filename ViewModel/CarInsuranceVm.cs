@@ -7,7 +7,7 @@ namespace CarInsuranceQuoteMVC.ViewModels
 {
     public class CarInsuranceVm
     {
-        public  int FinalQuote { get; set; }
+        public int FinalQuote { get; set; }
         public  string FirstName { get; set; }
         public  string LastName { get; set; }
         public  string EmailAddress { get; set; }
